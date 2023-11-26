@@ -1,0 +1,29 @@
+org: kawamataryo
+app: alexa-minecraft
+service: sls-alexa
+frameworkVersion: '3'
+
+useDotenv: true
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: ap-northeast-1
+  iam:
+    role:
+      statements:
+        - Effect: 'Allow'
+          Action:
+            - 'ec2:StopInstances'
+            - 'ec2:StartInstances'
+            - 'ec2:DescribeInstances'
+          Resource: "*"
+
+functions:
+  mySkill:
+    handler: src/index.handler
+    events:
+      - alexaSkill: ${env:ALEXA_SKILL_ID}
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-dotenv-plugin

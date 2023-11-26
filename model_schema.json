@@ -1,0 +1,122 @@
+{
+  "interactionModel": {
+      "languageModel": {
+          "invocationName": "マイクラサーバー",
+          "intents": [
+              {
+                  "name": "AMAZON.CancelIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.HelpIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.StopIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.NavigateHomeIntent",
+                  "samples": []
+              },
+              {
+                  "name": "ServerOperationIntent",
+                  "slots": [
+                      {
+                          "name": "ServerName",
+                          "type": "SERVER_NAME"
+                      },
+                      {
+                          "name": "OperationName",
+                          "type": "OPERATION_NAME"
+                      }
+                  ],
+                  "samples": [
+                      "{ServerName} サーバーを {OperationName} して",
+                      "{ServerName} サーバー {OperationName}",
+                      "{ServerName} を {OperationName} して",
+                      "{ServerName} を {OperationName}",
+                      "{ServerName} {OperationName} して",
+                      "{ServerName} {OperationName}"
+                  ]
+              }
+          ],
+          "types": [
+              {
+                  "name": "SERVER_NAME",
+                  "values": [
+                      {
+                          "id": "pokemon",
+                          "name": {
+                              "value": "ポケモン",
+                              "synonyms": [
+                                  "ぽけもん",
+                                  "ポケットモンスター"
+                              ]
+                          }
+                      },
+                      {
+                          "id": "survival",
+                          "name": {
+                              "value": "サバイバル",
+                              "synonyms": [
+                                  "サバイバル"
+                              ]
+                          }
+                      }
+                  ]
+              },
+              {
+                  "name": "OPERATION_NAME",
+                  "values": [
+                      {
+                          "id": "status",
+                          "name": {
+                              "value": "ステータス",
+                              "synonyms": [
+                                  "ステータス",
+                                  "動いてる？",
+                                  "どんなじょうたい",
+                                  "状態",
+                                  "起動している？"
+                              ]
+                          }
+                      },
+                      {
+                          "id": "stop",
+                          "name": {
+                              "value": "停止",
+                              "synonyms": [
+                                  "シャットダウン",
+                                  "終了",
+                                  "オフ",
+                                  "止めて",
+                                  "とめて",
+                                  "おわり",
+                                  "ていし",
+                                  "停止"
+                              ]
+                          }
+                      },
+                      {
+                          "id": "start",
+                          "name": {
+                              "value": "起動",
+                              "synonyms": [
+                                  "オン",
+                                  "スタート",
+                                  "動かして",
+                                  "起こす",
+                                  "立てる",
+                                  "立てて",
+                                  "開始",
+                                  "きどう"
+                              ]
+                          }
+                      }
+                  ]
+              }
+          ]
+      }
+  }
+}

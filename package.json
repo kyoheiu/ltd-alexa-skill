@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "serverless-plugin-typescript": "^2.1.5",
+    "typescript": "^5.3.2"
+  },
+  "dependencies": {
+    "@types/aws-lambda": "^8.10.129",
+    "ask-sdk": "^2.14.0",
+    "aws-sdk": "^2.1502.0",
+    "serverless-dotenv-plugin": "^6.0.0",
+    "ts-pattern": "^5.0.5"
+  }
+}
