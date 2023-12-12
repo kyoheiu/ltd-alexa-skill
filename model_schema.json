@@ -1,122 +1,223 @@
 {
-  "interactionModel": {
-      "languageModel": {
-          "invocationName": "マイクラサーバー",
-          "intents": [
-              {
-                  "name": "AMAZON.CancelIntent",
-                  "samples": []
-              },
-              {
-                  "name": "AMAZON.HelpIntent",
-                  "samples": []
-              },
-              {
-                  "name": "AMAZON.StopIntent",
-                  "samples": []
-              },
-              {
-                  "name": "AMAZON.NavigateHomeIntent",
-                  "samples": []
-              },
-              {
-                  "name": "ServerOperationIntent",
-                  "slots": [
-                      {
-                          "name": "ServerName",
-                          "type": "SERVER_NAME"
-                      },
-                      {
-                          "name": "OperationName",
-                          "type": "OPERATION_NAME"
-                      }
-                  ],
-                  "samples": [
-                      "{ServerName} サーバーを {OperationName} して",
-                      "{ServerName} サーバー {OperationName}",
-                      "{ServerName} を {OperationName} して",
-                      "{ServerName} を {OperationName}",
-                      "{ServerName} {OperationName} して",
-                      "{ServerName} {OperationName}"
-                  ]
-              }
-          ],
-          "types": [
-              {
-                  "name": "SERVER_NAME",
-                  "values": [
-                      {
-                          "id": "pokemon",
-                          "name": {
-                              "value": "ポケモン",
-                              "synonyms": [
-                                  "ぽけもん",
-                                  "ポケットモンスター"
-                              ]
-                          }
-                      },
-                      {
-                          "id": "survival",
-                          "name": {
-                              "value": "サバイバル",
-                              "synonyms": [
-                                  "サバイバル"
-                              ]
-                          }
-                      }
-                  ]
-              },
-              {
-                  "name": "OPERATION_NAME",
-                  "values": [
-                      {
-                          "id": "status",
-                          "name": {
-                              "value": "ステータス",
-                              "synonyms": [
-                                  "ステータス",
-                                  "動いてる？",
-                                  "どんなじょうたい",
-                                  "状態",
-                                  "起動している？"
-                              ]
-                          }
-                      },
-                      {
-                          "id": "stop",
-                          "name": {
-                              "value": "停止",
-                              "synonyms": [
-                                  "シャットダウン",
-                                  "終了",
-                                  "オフ",
-                                  "止めて",
-                                  "とめて",
-                                  "おわり",
-                                  "ていし",
-                                  "停止"
-                              ]
-                          }
-                      },
-                      {
-                          "id": "start",
-                          "name": {
-                              "value": "起動",
-                              "synonyms": [
-                                  "オン",
-                                  "スタート",
-                                  "動かして",
-                                  "起こす",
-                                  "立てる",
-                                  "立てて",
-                                  "開始",
-                                  "きどう"
-                              ]
-                          }
-                      }
-                  ]
-              }
-          ]
-      }
-  }
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "マイクラサーバー",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "ServerOperationIntent",
+                    "slots": [
+                        {
+                            "name": "ServerName",
+                            "type": "SERVER_NAME",
+                            "samples": [
+                                "{ServerName} だよ ",
+                                "{ServerName}"
+                            ]
+                        },
+                        {
+                            "name": "OperationName",
+                            "type": "OPERATION_NAME",
+                            "samples": [
+                                "サーバーを {OperationName}  ",
+                                "{OperationName} してください",
+                                "{OperationName}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "{OperationName}",
+                        "{ServerName}",
+                        "{ServerName} サーバーを {OperationName} して",
+                        "{ServerName} サーバー {OperationName}",
+                        "{ServerName} を {OperationName} して",
+                        "{ServerName} を {OperationName}",
+                        "{ServerName} {OperationName} して",
+                        "{ServerName} {OperationName}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "SERVER_NAME",
+                    "values": [
+                        {
+                            "id": "pokemon",
+                            "name": {
+                                "value": "ポケモン",
+                                "synonyms": [
+                                    "ぽけもん",
+                                    "ポケットモンスター"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "survival",
+                            "name": {
+                                "value": "サバイバル",
+                                "synonyms": [
+                                    "さばいばる"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "OPERATION_NAME",
+                    "values": [
+                        {
+                            "id": "status",
+                            "name": {
+                                "value": "状態を確認",
+                                "synonyms": [
+                                    "状態を確認",
+                                    "状態確認",
+                                    "ステータス",
+                                    "動いてる？",
+                                    "どんなじょうたい",
+                                    "状態"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "stop",
+                            "name": {
+                                "value": "停止",
+                                "synonyms": [
+                                    "シャットダウン",
+                                    "終了",
+                                    "オフ",
+                                    "止めて",
+                                    "とめて",
+                                    "おわり",
+                                    "ていし",
+                                    "停止"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "start",
+                            "name": {
+                                "value": "起動",
+                                "synonyms": [
+                                    "オン",
+                                    "スタート",
+                                    "動かして",
+                                    "起こす",
+                                    "立てる",
+                                    "立てて",
+                                    "開始",
+                                    "きどう"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "ServerOperationIntent",
+                    "delegationStrategy": "ALWAYS",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "ServerName",
+                            "type": "SERVER_NAME",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.682453099389.1596352271683"
+                            },
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.352000798799.1246328325200.1350256173407"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "OperationName",
+                            "type": "OPERATION_NAME",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.682453099389.558547965291"
+                            },
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.352000798799.783321369052.1539296809798"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.682453099389.1596352271683",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "どのサーバーを {OperationName}しますか？ "
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "{OperationName} するサーバーを教えてください"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.682453099389.558547965291",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "どのような操作を {ServerName}サーバーにしますか？ "
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "{ServerName}サーバーへの操作を教えてください"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.352000798799.783321369052.1539296809798",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "すみません。うまく聞き取れませんでした。有効な操作は起動・停止・ステータスです"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.352000798799.1246328325200.1350256173407",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "すみません。うまく聞き取れませんでした。もう一度サーバー名を教えてください。有効なサーバーはポケモンとマインクラフトです"
+                    }
+                ]
+            }
+        ]
+    }
 }
