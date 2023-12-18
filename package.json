@@ -6,7 +6,6 @@
   "dependencies": {
     "@types/aws-lambda": "^8.10.129",
     "ask-sdk": "^2.14.0",
-    "aws-sdk": "^2.1502.0",
     "serverless-dotenv-plugin": "^6.0.0",
     "ts-pattern": "^5.0.5"
   }

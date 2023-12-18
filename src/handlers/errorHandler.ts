@@ -5,8 +5,8 @@ export const errorHandler: ErrorHandler = {
     return true;
   },
   handle(handlerInput: HandlerInput, error: Error) {
-    console.log(`処理されたエラー：${error.message}`);
-    const speakOutput = 'すみません。コマンドを理解できませんでした。使えるサーバーはポケモンとサバイバルです。操作は起動、停止、ステータスの確認ができます。もう一度言ってください。';
+    console.log(`Error: ${error.message}`);
+    const speakOutput = 'すみません、わかりませんでした。';
 
     return handlerInput.responseBuilder
       .speak(speakOutput)

@@ -1,6 +1,6 @@
 import { SkillBuilders } from 'ask-sdk';
 import { Handler } from 'aws-lambda';
-import { serverOperationHandler } from './handlers/serverOperationHandler';
+import { shoppingListHandler } from './handlers/shoppingListHandler';
 import { launchRequestHandler } from './handlers/launchRequestHandler';
 import { helpIntentHandler } from './handlers/helpIntentHandler';
 import { cancelAndStopIntentHandler } from './handlers/cancelAndStopIntentHandler';
@@ -14,7 +14,7 @@ export const handler: Handler = async (event, context) => {
     skill = SkillBuilders.custom()
       .addRequestHandlers(
         launchRequestHandler,
-        serverOperationHandler,
+        shoppingListHandler,
         helpIntentHandler,
         cancelAndStopIntentHandler,
       )
