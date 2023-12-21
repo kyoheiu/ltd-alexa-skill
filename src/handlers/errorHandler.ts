@@ -6,7 +6,7 @@ export const errorHandler: ErrorHandler = {
   },
   handle(handlerInput: HandlerInput, error: Error) {
     console.log(`Error: ${error.message}`);
-    const speakOutput = 'すみません、わかりませんでした。';
+    const speakOutput = 'わかりませんでした。';
 
     return handlerInput.responseBuilder
       .speak(speakOutput)

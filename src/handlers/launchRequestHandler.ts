@@ -6,7 +6,7 @@ export const launchRequestHandler: RequestHandler = {
     return request.type === 'LaunchRequest';
   },
   handle(handlerInput: HandlerInput) {
-    const speechText = 'どうぞ。';
+    const speechText = '何を追加しますか？';
 
     return handlerInput.responseBuilder
       .speak(speechText)
