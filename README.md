@@ -1,3 +1,3 @@
-# Minecraft Server Alexa Skill
+# Shopping list Server Alexa Skill
 
-Lambda Function for Alexa skills to operate Minecraft servers.
+Lambda Function for Alexa skills to manage self hosted shopping list.
